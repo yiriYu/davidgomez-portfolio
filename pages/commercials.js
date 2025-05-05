@@ -1,0 +1,1 @@
+export default function Commercials() { return <div>Commercials Page</div>; }
