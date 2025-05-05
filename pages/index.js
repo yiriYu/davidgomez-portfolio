@@ -1,0 +1,1 @@
+// Home page with logo and navigation
