@@ -1,1 +1,0 @@
-export default function Commercials() { return <div>COMMERCIALS PAGE - All videos here</div> }
