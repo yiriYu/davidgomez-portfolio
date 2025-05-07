@@ -17,20 +17,20 @@ export default function Commercials() {
   };
 
   return (
-    <div style={ padding: '40px', fontFamily: 'sans-serif', position: 'relative' }>
-      <div style={
+    <div style={{ padding: '40px', fontFamily: 'sans-serif', position: 'relative' }}>
+      <div style={{
         position: 'absolute', top: 10, left: 10, display: 'flex',
         justifyContent: 'center', gap: '30px', width: '100%', zIndex: 10
-      }>
-        <a href="/commercials" style={...navStyle}>Commercials</a>
-        <a href="/feature" style={...navStyle}>Feature</a>
-        <a href="/" style={...navStyle}>Home</a>
+      }}>
+        <a href="/commercials" style={{...navStyle}}>Commercials</a>
+        <a href="/feature" style={{...navStyle}}>Feature</a>
+        <a href="/" style={{...navStyle}}>Home</a>
       </div>
 
-      <h1 style={ fontSize: '32px' }>Commercials</h1>
-      <div style={ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px' }>
+      <h1 style={{ fontSize: '32px' }}>Commercials</h1>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px' }}>
         {videos.map((v, i) => (
-          <div key={i} onClick={() => setLightbox(v.url)} style={ cursor: 'pointer' }>
+          <div key={i} onClick={() => setLightbox(v.url)} style={{ cursor: 'pointer' }}>
             <div className="video-container">
               <iframe src={v.url} frameBorder="0" allowFullScreen></iframe>
             </div>
@@ -40,7 +40,7 @@ export default function Commercials() {
       </div>
 
       {lightbox && (
-        <div onClick={() => setLightbox(null)} style={
+        <div onClick={() => setLightbox(null)} style={{
           position: 'fixed',
           top: 0, left: 0,
           width: '100vw', height: '100vh',
@@ -49,10 +49,10 @@ export default function Commercials() {
           justifyContent: 'center',
           alignItems: 'center',
           zIndex: 1000
-        }>
-          <div style={ width: '80%', maxWidth: '960px' }>
+        }}>
+          <div style={{ width: '80%', maxWidth: '960px' }}>
             <div className="video-container">
-              <iframe src={lightbox} frameBorder="0" allowFullScreen style={ width: '100%', height: '480px' }></iframe>
+              <iframe src={lightbox} frameBorder="0" allowFullScreen style={{ width: '100%', height: '480px' }}></iframe>
             </div>
           </div>
         </div>
